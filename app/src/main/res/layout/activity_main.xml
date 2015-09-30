@@ -21,7 +21,7 @@
 
     <EditText
         android:textColorHint="#88aa88"
-        android:hint="Day (dd)"
+        android:hint="Month (mm)"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberSigned"
@@ -34,7 +34,7 @@
 
     <EditText
         android:textColorHint="#88aa88"
-        android:hint="Month (mm)"
+        android:hint="Day (dd)"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberSigned"
