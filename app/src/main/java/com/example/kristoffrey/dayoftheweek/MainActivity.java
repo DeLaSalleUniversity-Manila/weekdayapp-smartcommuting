@@ -1,6 +1,7 @@
 package com.example.kristoffrey.dayoftheweek;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,8 +21,6 @@ public class MainActivity extends Activity {
         Integer mm, yyyy, day, m, y, c, d;
         String year, sy, sc, output;
         EditText idd, imm, iyyyy;
-        TextView out;
-        out = (TextView)findViewById(R.id.text_Out);
         idd = (EditText)findViewById(R.id.in_dd);
         imm = (EditText)findViewById(R.id.in_mm);
         iyyyy = (EditText)findViewById(R.id.in_yyyy);
@@ -65,7 +64,9 @@ public class MainActivity extends Activity {
                 output = output.concat("is on a Sunday");
                 break;
         }
-        out.setText(output);
+        Intent intent = new Intent(this, output.class);
+        intent.putExtra("theString", output);
+        startActivity(intent);
     }
 
     @Override
